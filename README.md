@@ -214,8 +214,10 @@ git push -u origin main
 
 ```bash
 git remote -v
-# origin    https://github.com/USERNAME-UL-TAU/paoj-2026.git          (fork-ul tău)
-# upstream  https://github.com/stefaneduard-deaconu/paoj-2026.git    (repo-ul cursului)
+# origin   https://github.com/USERNAME-UL-TAU/paoj-2026.git                   <- (fork-ul tău)
+# origin   https://github.com/USERNAME-UL-TAU/paoj-2026.git                   <- (fork-ul tău)
+# upstream         https://github.com/stefaneduard-deaconu/paoj-2026.git      <- (repo-ul cursului)
+# upstream         https://github.com/stefaneduard-deaconu/paoj-2026.git      <- (repo-ul cursului)
 ```
 
 ✅ **Gata!** Acum ai aceeași configurație ca cei care încep de la zero.
