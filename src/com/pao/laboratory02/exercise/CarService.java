@@ -1,4 +1,4 @@
-package com.pao.laboratory01.exercise;
+package com.pao.laboratory02.exercise;
 
 /**
  * Exercițiu — Singleton Service pentru Car
@@ -80,7 +80,18 @@ public class CarService {
      * 4. Dacă nu o găsești (for-ul se termină), afișează "Mașina nu a fost găsită."
      */
     public void addReview(String carName, String review) {
-        // TODO: implementează aici
+        for (int i = 0; i < cars.length; i++) {
+            if (cars[i].getName().equals(carName)) {
+                String[] vechileReviewuri = cars[i].getReviews();
+                String[] noileReviewuri = new String[vechileReviewuri.length + 1];
+                System.arraycopy(vechileReviewuri, 0, noileReviewuri, 0, vechileReviewuri.length);
+                noileReviewuri[noileReviewuri.length - 1] = review;
+                cars[i].setReviews(noileReviewuri);
+                System.out.println("Review-ul a fost adăugat cu succes pentru \"" + carName + "\".");
+                return;
+            }
+        }
+        System.out.println("Mașina nu a fost găsită.");
     }
 }
 

@@ -1,4 +1,6 @@
-package com.pao.laboratory01.exercise;
+package com.pao.laboratory02.exercise;
+
+import com.pao.laboratory02.exercise.CarService;
 
 import java.util.Scanner;
 
@@ -46,7 +48,11 @@ public class Main {
                     // 1. Citește numele mașinii de la tastatură (scanner.next())
                     // 2. Citește textul review-ului (scanner.next())
                     // 3. Apelează carService.addReview(carName, review)
-                    System.out.println("TODO — implementează adăugare review");
+                    System.out.print("Introdu numele mașinii: ");
+                    String carName = scanner.next();
+                    String reviews = scanner.next();
+                    carService.addReview(carName, reviews);
+                  //  System.out.println("TODO — implementează adăugare review");
                     break;
                 case 0:
                     System.out.println("La revedere!");
