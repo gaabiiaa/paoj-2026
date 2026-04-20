@@ -9,13 +9,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // Part A
-        // load initial state
+
+        if (!scanner.hasNext()) {
+            return;
+        }
+
         OrderState initialState = OrderState.valueOf(scanner.next());
         Order order = new Order(initialState);
         System.out.println("Initial order state: " + initialState);
 
-        while (true) {
+        while (scanner.hasNext()) {
             OrderCommand orderCommand = OrderCommand.valueOf(scanner.next());
             switch (orderCommand) {
                 case next -> {
