@@ -1,6 +1,7 @@
 package com.pao.laboratory06.exercise1;
 
 import java.util.Scanner;
+import java.util.Comparator;
 
 public class Angajat {
     private String nume;
@@ -28,5 +29,9 @@ public class Angajat {
 
     public double getSalariu() {
         return salariu;
+    }
+
+    public int compareTo(Angajat altAngajat) {
+        return Double.compare(this.salariu, altAngajat.salariu);
     }
 }
